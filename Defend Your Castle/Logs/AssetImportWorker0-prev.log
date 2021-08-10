@@ -1,0 +1,179 @@
+Using pre-set license
+Built from '2020.3/release' branch; Version is '2020.3.15f2 (6cf78cb77498) revision 7141260'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19043.1110; Version 2009; 64bit' Language: 'de' Physical Memory: 8115 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.15f2\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/mariu/OneDrive/Dokumente/GitHub/Defend-Your-Castle/Defend Your Castle
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+56073
+Successfully changed project path to: C:/Users/mariu/OneDrive/Dokumente/GitHub/Defend-Your-Castle/Defend Your Castle
+C:/Users/mariu/OneDrive/Dokumente/GitHub/Defend-Your-Castle/Defend Your Castle
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 40.00 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.15f2 (6cf78cb77498)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/mariu/OneDrive/Dokumente/GitHub/Defend-Your-Castle/Defend Your Castle/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GT 730M (ID=0x1290)
+    Vendor:   
+    VRAM:     2020 MB
+    Driver:   21.21.13.7654
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56644
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003373 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 35.26 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.632 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1633ms)
+		BeginReloadAssembly (86ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (542ms)
+			LoadAssemblies (82ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (216ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (42ms)
+			SetupLoadedEditorAssemblies (198ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (35ms)
+				BeforeProcessingInitializeOnLoad (12ms)
+				ProcessInitializeOnLoadAttributes (107ms)
+				ProcessInitializeOnLoadMethodAttributes (37ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.006670 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.448 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1449ms)
+		BeginReloadAssembly (210ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (24ms)
+		EndReloadAssembly (1154ms)
+			LoadAssemblies (120ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (348ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (53ms)
+			SetupLoadedEditorAssemblies (505ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (124ms)
+				ProcessInitializeOnLoadAttributes (358ms)
+				ProcessInitializeOnLoadMethodAttributes (5ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.35 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1399 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 65.6 MB.
+System memory in use after: 65.6 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1833.
+Total: 2.684900 ms (FindLiveObjects: 0.178400 ms CreateObjectMapping: 0.063600 ms MarkObjects: 2.338900 ms  DeleteObjects: 0.102500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Models/Turret.fbx
+  artifactKey: Guid(e347bfbf114237c44a505f9c0c87f811) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Turret.fbx using Guid(e347bfbf114237c44a505f9c0c87f811) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '287237a3eebc5103c49ff572e84c5eb3') in 0.201710 seconds 
+  Import took 0.206585 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.488555 seconds.
+  path: Assets/Models/Turret.fbx
+  artifactKey: Guid(e347bfbf114237c44a505f9c0c87f811) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Turret.fbx using Guid(e347bfbf114237c44a505f9c0c87f811) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4399e1404f3cd448898082e54ec2034') in 0.072968 seconds 
+  Import took 0.077251 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.645613 seconds.
+  path: Assets/Models/Turret.fbx
+  artifactKey: Guid(e347bfbf114237c44a505f9c0c87f811) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Turret.fbx using Guid(e347bfbf114237c44a505f9c0c87f811) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45bd259b2246ca8744d83fbdb53da6c6') in 0.072388 seconds 
+  Import took 0.090563 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 375.678868 seconds.
+  path: Assets/Prefabs/Turret Variant.prefab
+  artifactKey: Guid(c642b73fa311ad440b8eaf2b0b6a9c77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Turret Variant.prefab using Guid(c642b73fa311ad440b8eaf2b0b6a9c77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1dc7835254993f61190c5e161778c62') in 0.035873 seconds 
+  Import took 0.042176 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.776464 seconds.
+  path: Assets/Prefabs/Turret.prefab
+  artifactKey: Guid(ee122c251af53e842816ff22a4a17582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Turret.prefab using Guid(ee122c251af53e842816ff22a4a17582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2e5f9a981ec619dda7ed0472dcb61f3') in 0.019665 seconds 
+  Import took 0.024698 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 743.441745 seconds.
+  path: Assets/Prefabs/Turret.prefab
+  artifactKey: Guid(ee122c251af53e842816ff22a4a17582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Turret.prefab using Guid(ee122c251af53e842816ff22a4a17582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d229e41f213ef5c017b902f4df27cb7') in 0.024311 seconds 
+  Import took 0.028861 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
