@@ -6,7 +6,7 @@ public class TurretNearest : MonoBehaviour
 {
     [Header("Variable Attributes")]
     public float range = 15f;
-    public float fireRate = 2f;
+    public float fireRate = 0.2f;
     private float fireCountdown = 0f;
 
     [Header("Unity Setup")]
