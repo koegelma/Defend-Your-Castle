@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
@@ -35,7 +33,7 @@ public class CameraController : MonoBehaviour
         {
             if (transform.position.z < maxZ) { transform.Translate(Vector3.forward * panSpeed * Time.deltaTime, Space.World); }
         }
-        if (Input.GetKey("s") || Input.mousePosition.y <= panBorderThickness)
+        if (Input.GetKey("s") || Input.mousePosition.y <= panBorderThickness / 3)
         {
             if (transform.position.z > minZ) { transform.Translate(Vector3.back * panSpeed * Time.deltaTime, Space.World); }
         }

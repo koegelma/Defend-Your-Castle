@@ -17,6 +17,8 @@ public class TurretFirst : MonoBehaviour
     private float longestDistTravelled;
     private float distance;
     private GameObject nearestEnemy;
+    public GameObject bulletPrefab;
+    public Transform firePoint;
 
 
     void Start()
@@ -46,7 +48,13 @@ public class TurretFirst : MonoBehaviour
 
     void Shoot()
     {
-        //Debug.Log("Shot from " + gameObject.name);
+        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Bullet bullet = bulletGO.GetComponent<Bullet>();
+
+        if (bullet != null)
+        {
+            bullet.Seek(target);
+        }
     }
 
     void UpdateTarget()
