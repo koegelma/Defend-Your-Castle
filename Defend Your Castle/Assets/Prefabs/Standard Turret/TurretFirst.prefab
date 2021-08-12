@@ -75,8 +75,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beccf6047dc70f74ab2a2bc48e272c23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 15
-  fireRate: 1
+  range: 20
+  fireRate: 2
   enemyTag: Enemy
   headRotation: {fileID: 9149073509018683359}
   bulletPrefab: {fileID: 8175281663976604200, guid: ac48e75c061295347aae46cf5964031c, type: 3}
@@ -141,8 +141,8 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 5747258fcea742c4588e13af8ad3f2be, type: 2}
-  - {fileID: 2100000, guid: bfe75bb3ae4ade9488f6e17ec216eb55, type: 2}
-  - {fileID: 2100000, guid: 57e7174c2f5b9034795d32c149139a5a, type: 2}
+  - {fileID: 2100000, guid: 2b1f8fc576d1f85408fe09ccb8d7a8ac, type: 2}
+  - {fileID: 2100000, guid: 0feadc475bf5b544ba3c060536d5ffc4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -255,8 +255,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bfe75bb3ae4ade9488f6e17ec216eb55, type: 2}
-  - {fileID: 2100000, guid: 57e7174c2f5b9034795d32c149139a5a, type: 2}
+  - {fileID: 2100000, guid: 2b1f8fc576d1f85408fe09ccb8d7a8ac, type: 2}
+  - {fileID: 2100000, guid: 0feadc475bf5b544ba3c060536d5ffc4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

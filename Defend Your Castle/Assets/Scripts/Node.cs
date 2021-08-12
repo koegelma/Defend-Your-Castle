@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 public class Node : MonoBehaviour
 {
     public Color hoverColor;
+    public Color insufficientMoneyColor;
     public Vector3 positionOffset;
 
     [Header("Optional")]
@@ -28,15 +29,10 @@ public class Node : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            return;
-        }
+        if (EventSystem.current.IsPointerOverGameObject()) { return; }
 
-        if (!buildManager.CanBuild)
-        {
-            return;
-        }
+        if (!buildManager.CanBuild) { return; }
+
         if (unit != null)
         {
             Debug.Log("Can't build there!");
@@ -47,16 +43,12 @@ public class Node : MonoBehaviour
     }
     private void OnMouseEnter()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            return;
-        }
+        if (EventSystem.current.IsPointerOverGameObject()) { return; }
 
-        if (!buildManager.CanBuild)
-        {
-            return;
-        }
-        rend.material.color = hoverColor;
+        if (!buildManager.CanBuild) { return; }
+
+        if (buildManager.HasMoney) { rend.material.color = hoverColor; }
+        else { rend.material.color = insufficientMoneyColor; }
     }
     private void OnMouseExit()
     {

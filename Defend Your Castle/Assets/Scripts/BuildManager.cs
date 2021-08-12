@@ -16,10 +16,11 @@ public class BuildManager : MonoBehaviour
     public GameObject standardTurretPrefab;
     public GameObject firstTurretPrefab;
     public GameObject missileLauncherPrefab;
+    public GameObject buildEffect;
     private UnitBlueprint unitToBuild;
 
     public bool CanBuild { get { return unitToBuild != null; } }
-
+    public bool HasMoney { get { return PlayerStats.Money >= unitToBuild.cost; } }
     public void BuildUnitOn(Node node)
     {
         if (PlayerStats.Money < unitToBuild.cost)
@@ -30,10 +31,13 @@ public class BuildManager : MonoBehaviour
 
         PlayerStats.Money -= unitToBuild.cost;
 
-        Debug.Log("Unit build! Money left: " + PlayerStats.Money);
+        //Debug.Log("Unit build! Money left: " + PlayerStats.Money);
 
         GameObject unit = (GameObject)Instantiate(unitToBuild.prefab, node.GetBuildPosition(), Quaternion.identity);
         node.unit = unit;
+
+        GameObject effect = (GameObject)Instantiate(buildEffect, node.GetBuildPosition(), Quaternion.identity);
+        Destroy(effect, 5f);
     }
     public void SelectUnitToBuild(UnitBlueprint turret)
     {

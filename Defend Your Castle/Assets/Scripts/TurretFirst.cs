@@ -80,7 +80,7 @@ public class TurretFirst : MonoBehaviour
 
     void FirstEnemy(GameObject enemy)
     {
-        float distTravelled = enemy.GetComponent<EnemyMovement>().distanceTravelled;
+        float distTravelled = enemy.GetComponent<Enemy>().distanceTravelled;
         float distToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
 
         if (distTravelled > longestDistTravelled && distToEnemy <= range)

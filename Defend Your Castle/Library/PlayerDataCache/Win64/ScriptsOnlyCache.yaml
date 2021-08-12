@@ -1,8 +1,15 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - BuildManager
     - Bullet
-    - EnemyMovement
+    - CameraController
+    - Enemy
+    - GameManager
+    - Node
+    - PlayerStats
+    - Shop
+    - TurretFirst
     - TurretNearest
     - WaveSpawner
     - Waypoints
@@ -15,8 +22,12 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.HorizontalLayoutGroup
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.LayoutElement
     - UnityEngine.UI.Shadow
     - UnityEngine.UI.Text
   sceneClasses:
@@ -41,36 +52,64 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 1440}
+    - Class: 114
+      Script: {instanceID: 1578}
+    - Class: 114
+      Script: {instanceID: 1626}
+    - Class: 114
       Script: {instanceID: 1642}
     - Class: 114
-      Script: {instanceID: 1950}
+      Script: {instanceID: 1834}
     - Class: 114
-      Script: {instanceID: 2226}
+      Script: {instanceID: 1954}
     - Class: 114
-      Script: {instanceID: 2326}
+      Script: {instanceID: 2090}
     - Class: 114
-      Script: {instanceID: 2472}
+      Script: {instanceID: 2232}
     - Class: 114
-      Script: {instanceID: 2494}
+      Script: {instanceID: 2332}
     - Class: 114
-      Script: {instanceID: 2654}
+      Script: {instanceID: 2478}
     - Class: 114
-      Script: {instanceID: 2874}
+      Script: {instanceID: 2500}
     - Class: 114
-      Script: {instanceID: 3322}
+      Script: {instanceID: 2610}
     - Class: 114
-      Script: {instanceID: 4200}
+      Script: {instanceID: 2662}
     - Class: 114
-      Script: {instanceID: 117894}
+      Script: {instanceID: 2740}
+    - Class: 114
+      Script: {instanceID: 2882}
+    - Class: 114
+      Script: {instanceID: 3024}
+    - Class: 114
+      Script: {instanceID: 3036}
+    - Class: 114
+      Script: {instanceID: 3336}
+    - Class: 114
+      Script: {instanceID: 3950}
+    - Class: 114
+      Script: {instanceID: 4216}
+    - Class: 114
+      Script: {instanceID: 4234}
+    - Class: 114
+      Script: {instanceID: 213498}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -85,6 +124,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 199
       Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
     - Class: 223
@@ -94,16 +135,16 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: 5ab533713adae59372fb3e10a585c186
-    assemblyName: Unity.Timeline.dll
-    namespaceName: UnityEngine.Timeline
-    className: AnimationPlayableAsset
-  - hash:
-      serializedVersion: 2
       Hash: a6e561615949734e9f12f9b61661f43e
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: 5ab533713adae59372fb3e10a585c186
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
       Hash: 77aaaaa51f7a8d8ff333a879741e47d2
@@ -160,6 +201,12 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraController
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -188,6 +235,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: 9a761d55fc87f48f223c14aecf40ffd8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Node
   - hash:
       serializedVersion: 2
       Hash: a1aa98c78061c6f03a8c124cda576e67
@@ -244,10 +297,10 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
-      Hash: c274a86728a2760c5da62f7d2014972e
+      Hash: dda529ffe399c52d20c4c43ce4206927
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: EnemyMovement
+    className: Enemy
   - hash:
       serializedVersion: 2
       Hash: f40fedccd4adbc76605bea6d67537e4b
@@ -272,6 +325,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: TestResultRendererCallback
+  - hash:
+      serializedVersion: 2
+      Hash: 98194620038f449969cd60fe8284e923
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TurretFirst
   - hash:
       serializedVersion: 2
       Hash: 748dd2a2a28da4e618912da5ac45684b
@@ -358,10 +417,22 @@ ScriptsOnlyBuild:
     className: PlayerQuitHandler
   - hash:
       serializedVersion: 2
+      Hash: 1e28c1ba5cd7eba0f99cd6260f63ef97
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Shop
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: BaseInput
+  - hash:
+      serializedVersion: 2
+      Hash: dfd815e7e731ead711a3f527367e6220
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BuildManager
   - hash:
       serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca
@@ -508,6 +579,12 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
+      Hash: 31a0d247a68441f3b01446aae0ad2cf8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Bullet
+  - hash:
+      serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -538,16 +615,16 @@ ScriptsOnlyBuild:
     className: WaveSpawner
   - hash:
       serializedVersion: 2
-      Hash: 33541bb23686b546132a226949e87064
+      Hash: 9beb3fac7782b986b7b57311738d400e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: TurretFirst
+    className: PlayerStats
   - hash:
       serializedVersion: 2
-      Hash: a9eadf7717598821bf8c26fb64740ab5
+      Hash: b8feb5f8df6ef24c0ffb434708477b7d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Bullet
+    className: GameManager
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainScene.unity
