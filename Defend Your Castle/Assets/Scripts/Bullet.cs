@@ -36,17 +36,10 @@ public class Bullet : MonoBehaviour
         GameObject effectInstance = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(effectInstance, 4f);
 
-        if (explosionRadius > 0f)
-        {
-            Explode();
-        }
-        else
-        {
-            Damage(target);
-        }
+        if (explosionRadius > 0f) Explode();
+        else Damage(target);
 
         Destroy(gameObject);
-
     }
 
     private void Explode()
@@ -54,20 +47,14 @@ public class Bullet : MonoBehaviour
         Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
         foreach (Collider collider in colliders)
         {
-            if (collider.tag == "Enemy")
-            {
-                Damage(collider.transform);
-            }
+            if (collider.tag == "Enemy") Damage(collider.transform);
         }
     }
 
     private void Damage(Transform enemy)
     {
         Enemy e = enemy.GetComponent<Enemy>();
-        if (e != null)
-        {
-            e.TakeDamage(damage);
-        }
+        if (e != null) e.TakeDamage(damage);
     }
 
     private void OnDrawGizmosSelected()

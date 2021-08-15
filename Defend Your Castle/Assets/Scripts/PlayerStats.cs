@@ -11,9 +11,6 @@ public class PlayerStats : MonoBehaviour
     public int startLife = 100;
     public Text lifeText;
 
-
-
-
     private void Start()
     {
         Money = startMoney;
@@ -27,16 +24,14 @@ public class PlayerStats : MonoBehaviour
         HndLife();
     }
 
-
     private void HndLife()
     {
+        if (GameManager.instance.isGameOver) return;
         if (Life <= 0)
         {
-            if (GameManager.instance.isGameOver) { return; }
             GameManager.instance.GameOver();
             Life = 0;
         }
-
         lifeText.text = (Life + " Health");
     }
 }

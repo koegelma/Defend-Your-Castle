@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     public float speed = 10f;
     public int health = 100;
     public int moneyGain = 10;
+    public int damageToPlayer = 1;
     public float distanceTravelled = 0f;
     public GameObject deathEffect;
     private Vector3 lastPosition;
@@ -55,17 +56,14 @@ public class Enemy : MonoBehaviour
         distanceTravelled += Vector3.Distance(transform.position, lastPosition);
         lastPosition = transform.position;
 
-        if (Vector3.Distance(transform.position, target.position) <= 0.2f)
-        {
-            GetNextWaypoint();
-        }
+        if (Vector3.Distance(transform.position, target.position) <= 0.2f) GetNextWaypoint();
     }
 
     private void GetNextWaypoint()
     {
         if (wavepointIndex >= Waypoints.waypoints.Length - 1)
         {
-            PlayerStats.Life -= 1;
+            PlayerStats.Life -= damageToPlayer;
             Die();
             return;
         }

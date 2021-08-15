@@ -3,12 +3,12 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     private bool movement = true;
+    private float minX = -40f;
+    private float maxX = 100f;
     private float minY = 15f;
     private float maxY = 70f;
     private float minZ = -40f;
     private float maxZ = 50f;
-    private float maxX = 100f;
-    private float minX = -40f;
     private float panSpeed = 30f;
     private float panBorderThickness = 10f;
     private float scrollspeed = 5f;
@@ -16,14 +16,8 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            movement = !movement;
-        }
-        if (!movement)
-        {
-            return;
-        }
+        if (Input.GetKeyDown(KeyCode.Escape)) movement = !movement;
+        if (!movement) return;
         InputControllMovement();
     }
 

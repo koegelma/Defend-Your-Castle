@@ -13,9 +13,7 @@ public class BuildManager : MonoBehaviour
         }
         instance = this;
     }
-    public GameObject standardTurretPrefab;
-    public GameObject firstTurretPrefab;
-    public GameObject missileLauncherPrefab;
+
     public GameObject buildEffect;
     private UnitBlueprint unitToBuild;
 
@@ -39,8 +37,8 @@ public class BuildManager : MonoBehaviour
         GameObject effect = (GameObject)Instantiate(buildEffect, node.GetBuildPosition(), Quaternion.identity);
         Destroy(effect, 5f);
     }
-    public void SelectUnitToBuild(UnitBlueprint turret)
+    public void SelectUnitToBuild(UnitBlueprint unit)
     {
-        unitToBuild = turret;
+        unitToBuild = unit;
     }
 }

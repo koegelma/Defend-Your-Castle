@@ -97,19 +97,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2882}
     - Class: 114
-      Script: {instanceID: 3024}
+      Script: {instanceID: 2954}
     - Class: 114
-      Script: {instanceID: 3036}
+      Script: {instanceID: 3026}
     - Class: 114
-      Script: {instanceID: 3336}
+      Script: {instanceID: 3038}
     - Class: 114
-      Script: {instanceID: 3950}
+      Script: {instanceID: 3338}
     - Class: 114
-      Script: {instanceID: 4216}
+      Script: {instanceID: 3952}
     - Class: 114
-      Script: {instanceID: 4234}
+      Script: {instanceID: 4218}
     - Class: 114
-      Script: {instanceID: 213498}
+      Script: {instanceID: 4236}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -399,6 +399,12 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
+      Hash: b8feb5f8df6ef24c0ffb434708477b7d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManager
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -619,12 +625,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerStats
-  - hash:
-      serializedVersion: 2
-      Hash: b8feb5f8df6ef24c0ffb434708477b7d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameManager
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainScene.unity
