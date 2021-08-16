@@ -16,29 +16,39 @@ public class BuildManager : MonoBehaviour
 
     public GameObject buildEffect;
     private UnitBlueprint unitToBuild;
+    private Node selectedNode;
+    public NodeUI nodeUI;
 
     public bool CanBuild { get { return unitToBuild != null; } }
     public bool HasMoney { get { return PlayerStats.Money >= unitToBuild.cost; } }
-    public void BuildUnitOn(Node node)
+
+    public void SelectNode(Node node)
     {
-        if (PlayerStats.Money < unitToBuild.cost)
+
+        if (selectedNode == node)
         {
-            Debug.Log("Not enough money to build that unit!");
+            DeselectNode();
             return;
         }
+        selectedNode = node;
+        unitToBuild = null;
 
-        PlayerStats.Money -= unitToBuild.cost;
+        nodeUI.SetTarget(node);
+    }
 
-        //Debug.Log("Unit build! Money left: " + PlayerStats.Money);
-
-        GameObject unit = (GameObject)Instantiate(unitToBuild.prefab, node.GetBuildPosition(), Quaternion.identity);
-        node.unit = unit;
-
-        GameObject effect = (GameObject)Instantiate(buildEffect, node.GetBuildPosition(), Quaternion.identity);
-        Destroy(effect, 5f);
+    public void DeselectNode()
+    {
+        selectedNode = null;
+        nodeUI.Hide();
     }
     public void SelectUnitToBuild(UnitBlueprint unit)
     {
         unitToBuild = unit;
+        DeselectNode();
+    }
+
+    public UnitBlueprint GetUnitToBuild()
+    {
+        return unitToBuild;
     }
 }

@@ -7,8 +7,12 @@ public class Node : MonoBehaviour
     public Color insufficientMoneyColor;
     public Vector3 positionOffset;
 
-    [Header("Optional")]
+    [HideInInspector]
     public GameObject unit;
+    [HideInInspector]
+    public UnitBlueprint unitBlueprint;
+    [HideInInspector]
+    public bool isUpgraded = false;
 
     private Renderer rend;
     private Color startColor;
@@ -27,17 +31,73 @@ public class Node : MonoBehaviour
     {
         return transform.position + positionOffset;
     }
-    private void OnMouseDown()
-    {
-        if (EventSystem.current.IsPointerOverGameObject() || !buildManager.CanBuild) { return; }
 
-        if (unit != null)
+    private void BuildUnit(UnitBlueprint blueprint)
+    {
+        if (PlayerStats.Money < blueprint.cost)
         {
-            Debug.Log("Can't build there!");
+            Debug.Log("Not enough money to build that unit!");
             return;
         }
 
-        buildManager.BuildUnitOn(this);
+        PlayerStats.Money -= blueprint.cost;
+
+        //Debug.Log("Unit build! Money left: " + PlayerStats.Money);
+
+        GameObject _unit = (GameObject)Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
+        unit = _unit;
+
+        unitBlueprint = blueprint;
+
+        GameObject effect = (GameObject)Instantiate(buildManager.buildEffect, GetBuildPosition(), Quaternion.identity);
+        Destroy(effect, 5f);
+    }
+
+    public void UpgradeUnit()
+    {
+        if (PlayerStats.Money < unitBlueprint.upgradeCost)
+        {
+            Debug.Log("Not enough money to upgrade that unit!");
+            return;
+        }
+
+        PlayerStats.Money -= unitBlueprint.upgradeCost;
+
+        Destroy(unit);
+
+        //Debug.Log("Unit build! Money left: " + PlayerStats.Money);
+
+        GameObject _unit = (GameObject)Instantiate(unitBlueprint.upgradedPrefab, GetBuildPosition(), Quaternion.identity);
+        unit = _unit;
+
+
+        GameObject effect = (GameObject)Instantiate(buildManager.buildEffect, GetBuildPosition(), Quaternion.identity);
+        Destroy(effect, 5f);
+
+        isUpgraded = true;
+    }
+
+    public void SellUnit()
+    {
+        PlayerStats.Money += unitBlueprint.GetSellAmount();
+        Destroy(unit);
+        unitBlueprint = null;
+        isUpgraded = false;
+    }
+
+    private void OnMouseDown()
+    {
+        if (EventSystem.current.IsPointerOverGameObject()) return;
+
+        if (unit != null)
+        {
+            buildManager.SelectNode(this);
+            return;
+        }
+
+        if (!buildManager.CanBuild) return;
+
+        BuildUnit(buildManager.GetUnitToBuild());
     }
     private void OnMouseEnter()
     {
