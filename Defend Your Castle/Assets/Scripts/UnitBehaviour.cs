@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class UnitBehaviour : MonoBehaviour
 {
+    private Transform target;
+    private Enemy targetEnemy;
     [Header("General")]
     public float range = 15f;
 
@@ -13,13 +15,14 @@ public class UnitBehaviour : MonoBehaviour
 
     [Header("Use Laser")]
     public bool useLaser = false;
+    public int damageOverTime = 30;
+    public float slowAmount = 0.5f;
     public LineRenderer lineRenderer;
     public ParticleSystem impactEffect;
     public Light impactLight;
 
     [Header("Unity Setup")]
     public string enemyTag = "Enemy";
-    private Transform target;
     public Transform headRotation;
     private float turnSpeed = 12f;
     private float shortestDistance;
@@ -70,6 +73,9 @@ public class UnitBehaviour : MonoBehaviour
 
     private void Laser()
     {
+        targetEnemy.TakeDamage(damageOverTime * Time.deltaTime);
+        targetEnemy.Slow(slowAmount);
+
         if (!lineRenderer.enabled)
         {
             lineRenderer.enabled = true;
@@ -110,7 +116,11 @@ public class UnitBehaviour : MonoBehaviour
         foreach (GameObject enemy in enemies)
         { DistanceToEnemy(enemy); }
 
-        if (nearestEnemy != null && shortestDistance <= range) target = nearestEnemy.transform;
+        if (nearestEnemy != null && shortestDistance <= range)
+        {
+            target = nearestEnemy.transform;
+            targetEnemy = nearestEnemy.GetComponent<Enemy>();
+        }
         else target = null;
     }
 
@@ -133,13 +143,18 @@ public class UnitBehaviour : MonoBehaviour
         foreach (GameObject enemy in enemies)
         { FirstEnemy(enemy); }
 
-        if (nearestEnemy != null && distance <= range) target = nearestEnemy.transform;
+        if (nearestEnemy != null && distance <= range)
+        {
+            target = nearestEnemy.transform;
+            targetEnemy = nearestEnemy.GetComponent<Enemy>();
+        }
+
         else target = null;
     }
 
     private void FirstEnemy(GameObject enemy)
     {
-        float distTravelled = enemy.GetComponent<Enemy>().distanceTravelled;
+        float distTravelled = enemy.GetComponent<EnemyMovement>().distanceTravelled;
         float distToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
 
         if (distTravelled > longestDistTravelled && distToEnemy <= range)

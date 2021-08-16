@@ -36,6 +36,7 @@ public class WaveSpawner : MonoBehaviour
     {
         isWave = true;
         waveIndex++;
+        PlayerStats.Rounds++;
         enemyCount = waveIndex;
 
         Debug.Log("Wave: " + waveIndex);

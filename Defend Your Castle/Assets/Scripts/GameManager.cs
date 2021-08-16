@@ -3,8 +3,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-
-    public bool isGameOver = false;
+    public bool isGameOver;
+    public GameObject gameOverUI;
 
     private void Awake()
     {
@@ -15,9 +15,14 @@ public class GameManager : MonoBehaviour
         }
         instance = this;
     }
+
+    private void Start()
+    {
+        isGameOver = false;
+    }
     public void GameOver()
     {
-        Debug.Log("Game Over!");
         isGameOver = true;
+        gameOverUI.SetActive(true);
     }
 }

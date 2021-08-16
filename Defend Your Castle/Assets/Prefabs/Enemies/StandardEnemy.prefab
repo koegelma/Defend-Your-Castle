@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9144796596806007723}
   - component: {fileID: 4787542565566717881}
   - component: {fileID: 4015529650273381454}
+  - component: {fileID: 8954873713931145995}
   m_Layer: 0
   m_Name: StandardEnemy
   m_TagString: Enemy
@@ -111,5 +112,18 @@ MonoBehaviour:
   speed: 10
   health: 100
   moneyGain: 10
-  distanceTravelled: 0
+  damageToPlayer: 1
   deathEffect: {fileID: 1993234333162158367, guid: 917dd587186765d4b86919b91b126bd7, type: 3}
+--- !u!114 &8954873713931145995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116547351092661958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a59b067a75171e4fbd1d64124be658f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceTravelled: 0
