@@ -105,6 +105,8 @@ public class UnitBehaviour : MonoBehaviour
         Bullet bullet = bulletGO.GetComponent<Bullet>();
 
         if (bullet != null) bullet.Seek(target);
+
+       
     }
 
     private void UpdateTargetNearest()

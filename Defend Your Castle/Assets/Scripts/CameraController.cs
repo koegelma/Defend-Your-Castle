@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    private bool movement = true;
     private float minX = -40f;
     private float maxX = 100f;
     private float minY = 15f;
@@ -21,8 +20,6 @@ public class CameraController : MonoBehaviour
             this.enabled = false;
             return;
         }
-        if (Input.GetKeyDown(KeyCode.Escape)) movement = !movement;
-        if (!movement) return;
         InputControllMovement();
     }
 

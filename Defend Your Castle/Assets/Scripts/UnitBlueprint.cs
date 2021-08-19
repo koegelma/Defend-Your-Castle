@@ -7,6 +7,13 @@ public class UnitBlueprint
 
     public GameObject upgradedPrefab;
     public int upgradeCost;
+    public float unitRadius;
+
+    public float GetUnitRadius()
+    {
+        unitRadius = prefab.GetComponent<UnitBehaviour>().range / 2;
+        return unitRadius;
+    }
 
     public int GetSellAmount()
     {

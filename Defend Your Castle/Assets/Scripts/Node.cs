@@ -6,6 +6,7 @@ public class Node : MonoBehaviour
     public Color hoverColor;
     public Color insufficientMoneyColor;
     public Vector3 positionOffset;
+    public GameObject unitRadius;
 
     [HideInInspector]
     public GameObject unit;
@@ -13,10 +14,10 @@ public class Node : MonoBehaviour
     public UnitBlueprint unitBlueprint;
     [HideInInspector]
     public bool isUpgraded = false;
-
     private Renderer rend;
     private Color startColor;
-
+    private float radius;
+    private bool isRadiusActive = false;
     BuildManager buildManager;
 
     private void Start()
@@ -83,6 +84,9 @@ public class Node : MonoBehaviour
         Destroy(unit);
         unitBlueprint = null;
         isUpgraded = false;
+
+        GameObject effect = (GameObject)Instantiate(buildManager.buildEffect, GetBuildPosition(), Quaternion.identity);
+        Destroy(effect, 5f);
     }
 
     private void OnMouseDown()
@@ -103,11 +107,25 @@ public class Node : MonoBehaviour
     {
         if (EventSystem.current.IsPointerOverGameObject() || !buildManager.CanBuild) return;
 
-        if (buildManager.HasMoney) rend.material.color = hoverColor;
+        if (buildManager.HasMoney)
+        {
+            rend.material.color = hoverColor;
+
+            if (!isRadiusActive)
+            {
+                radius = buildManager.GetUnitToBuild().GetUnitRadius();
+                unitRadius.transform.localScale = new Vector3(radius, 0.1f, radius);
+                unitRadius.SetActive(true);
+                isRadiusActive = true;
+            }
+
+        }
         else rend.material.color = insufficientMoneyColor;
     }
     private void OnMouseExit()
     {
         rend.material.color = startColor;
+        unitRadius.SetActive(false);
+        isRadiusActive = false;
     }
 }
