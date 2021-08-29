@@ -41,6 +41,7 @@
      <Compile Include="Assets\Scripts\UnitBehaviour.cs" />
      <Compile Include="Assets\Scripts\Building\Node.cs" />
      <Compile Include="Assets\Scripts\EnemyMovement.cs" />
+     <Compile Include="Assets\Scripts\UI\SceneFader.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\UI\NodeUI.cs" />
      <Compile Include="Assets\Scripts\GameManagement\GameManager.cs" />
@@ -53,7 +54,7 @@
      <Compile Include="Assets\Scripts\UI\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\WaveSpawner.cs" />
      <Compile Include="Assets\Scripts\GameManagement\PlayerStats.cs" />
-     <Compile Include="Assets\Scripts\UI\SceneFader.cs" />
+     <Compile Include="Assets\Scripts\Wave.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

@@ -12,7 +12,6 @@ public class CameraController : MonoBehaviour
     private float panBorderThickness = 10f;
     private float scrollspeed = 5f;
 
-
     private void Update()
     {
         if (GameManager.instance.isGameOver)

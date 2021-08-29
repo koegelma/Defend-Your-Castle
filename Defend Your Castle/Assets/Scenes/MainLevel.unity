@@ -9146,7 +9146,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -115.36, y: -55}
+  m_AnchoredPosition: {x: -100, y: -55}
   m_SizeDelta: {x: 200, y: 75.73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1032136183
@@ -9292,7 +9292,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -115.36, y: 66.151}
+  m_AnchoredPosition: {x: -100, y: 66.15108}
   m_SizeDelta: {x: 200, y: 75.73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1048150663
@@ -16938,7 +16938,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 130.50208, y: 66.15103}
+  m_AnchoredPosition: {x: 100, y: 66.151}
   m_SizeDelta: {x: 200, y: 75.73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1920967948
@@ -19221,8 +19221,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a14b4ffaae970d84e8b0e408e1d6f7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standardEnemyPrefab: {fileID: 7876042151900790756, guid: 7d60a5cb3abf5e64eba7cc3364fbbfd1, type: 3}
-  enemy2Prefab: {fileID: 6149740118514282705, guid: 5e0b07b24b489aa4a8763bf41ccfecb0, type: 3}
+  waves:
+  - enemy: {fileID: 1116547351092661958, guid: 7d60a5cb3abf5e64eba7cc3364fbbfd1, type: 3}
+    count: 2
+    rate: 2
+    hasEnemyVariation: 0
+    enemyVariation: {fileID: 0}
+    variationModulo: 0
+  - enemy: {fileID: 1116547351092661958, guid: 7d60a5cb3abf5e64eba7cc3364fbbfd1, type: 3}
+    count: 4
+    rate: 2
+    hasEnemyVariation: 0
+    enemyVariation: {fileID: 0}
+    variationModulo: 0
+  - enemy: {fileID: 1116547351092661958, guid: 7d60a5cb3abf5e64eba7cc3364fbbfd1, type: 3}
+    count: 6
+    rate: 2
+    hasEnemyVariation: 0
+    enemyVariation: {fileID: 0}
+    variationModulo: 0
+  - enemy: {fileID: 1116547351092661958, guid: 7d60a5cb3abf5e64eba7cc3364fbbfd1, type: 3}
+    count: 8
+    rate: 2
+    hasEnemyVariation: 0
+    enemyVariation: {fileID: 0}
+    variationModulo: 0
+  - enemy: {fileID: 1116547351092661958, guid: 7d60a5cb3abf5e64eba7cc3364fbbfd1, type: 3}
+    count: 8
+    rate: 2
+    hasEnemyVariation: 1
+    enemyVariation: {fileID: 3993517989122507251, guid: 5e0b07b24b489aa4a8763bf41ccfecb0, type: 3}
+    variationModulo: 8
+  - enemy: {fileID: 1116547351092661958, guid: 7d60a5cb3abf5e64eba7cc3364fbbfd1, type: 3}
+    count: 12
+    rate: 3
+    hasEnemyVariation: 1
+    enemyVariation: {fileID: 3993517989122507251, guid: 5e0b07b24b489aa4a8763bf41ccfecb0, type: 3}
+    variationModulo: 3
   spawnPoint: {fileID: 105104236476888624, guid: b77498ff64cd2f943a026e80d09b0f30, type: 3}
   timeBetweenWaves: 8.5
   waveCountdownText: {fileID: 1920967948}

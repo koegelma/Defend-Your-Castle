@@ -35,6 +35,6 @@ public class PlayerStats : MonoBehaviour
             GameManager.instance.GameOver();
             Life = 0;
         }
-        lifeText.text = (Life + " Health");
+        lifeText.text = (Life + " HEALTH");
     }
 }
